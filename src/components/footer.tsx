@@ -9,8 +9,7 @@ const Footer = () => {
           Market Mingle
         </a>
         <p className="my-6 text-gray-500 dark:text-gray-400">
-          Open-source library of over 400+ web components and interactive
-          elements built for better web.
+          A digital marketplace
         </p>
         <ul className="mb-6 flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
           <li>
