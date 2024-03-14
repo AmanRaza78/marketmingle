@@ -8,6 +8,8 @@ import Navbar from "~/components/navbar";
 
 import Footer from "~/components/footer";
 
+import { ClerkProvider } from "@clerk/nextjs";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -25,12 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${inter.variable} bg-gray-800 text-white`}>
-        <Navbar />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`font-sans ${inter.variable} bg-gray-800 text-white`}>
+          <Navbar />
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
