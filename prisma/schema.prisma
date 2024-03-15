@@ -11,9 +11,14 @@ datasource db {
   url  	    = env("DATABASE_URL")
 }
 
-model User {
+model Product{
   id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  name String
+  price Float
+  description String
+  category String
+  brand String
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 }
 

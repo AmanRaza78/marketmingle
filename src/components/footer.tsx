@@ -9,7 +9,8 @@ const Footer = () => {
           Market Mingle
         </a>
         <p className="my-6 text-gray-500 dark:text-gray-400">
-        Connecting Needs with Solutions: Your Marketplace Destination"        </p>
+          Connecting Needs with Solutions: Your Marketplace Destination"{" "}
+        </p>
         <ul className="mb-6 flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
           <li>
             <a href="#" className="mr-4 hover:underline md:mr-6 ">
