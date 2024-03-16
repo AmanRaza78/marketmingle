@@ -117,8 +117,8 @@ const Marketplace = async () => {
                 <p>Product Name: {_product.name}</p>
                 <p>Product Description: {_product.description}</p>
                 <p>Product Price: {_product.price}</p>
-                <p>Product Category: {_product.category}</p>
-                <p>Product Brand: {_product.brand}</p>
+                <p>Product Brand: {_product.brand.name}</p>
+                <p>Product Category: {_product.category.name} </p>
               </div>
             ))}
           </div>

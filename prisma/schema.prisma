@@ -2,23 +2,39 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 // prisma/schema.prisma
 datasource db {
-  provider  = "postgresql"
-  url  	    = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-model Product{
-  id    Int     @id @default(autoincrement())
-  name String
-  price Float
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String
+  products Product[]
+}
+
+model Brand {
+  id       Int       @id @default(autoincrement())
+  name     String
+  products Product[]
+}
+
+model Product {
+  id          Int    @id @default(autoincrement())
+  name        String
+  price       Float
   description String
-  category String
-  brand String
-  createdAt DateTime @default(now())
-  updateAt DateTime @updatedAt
-}
 
+  categoryId Int
+  brandId    Int
+
+  category Category @relation(fields: [categoryId], references: [id])
+  brand Brand @relation(fields: [brandId], references: [id])
+
+  createdAt DateTime @default(now())
+  updateAt  DateTime @updatedAt
+}
