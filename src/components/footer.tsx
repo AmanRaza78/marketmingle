@@ -9,7 +9,7 @@ const Footer = () => {
           Market Mingle
         </a>
         <p className="my-6 text-gray-500 dark:text-gray-400">
-          Connecting Needs with Solutions: Your Marketplace Destination"{" "}
+          Connecting Needs with Solutions: Your Marketplace Destination{" "}
         </p>
         <ul className="mb-6 flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
           <li>
@@ -51,7 +51,7 @@ const Footer = () => {
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2021-2022{" "}
           <a href="#" className="hover:underline">
-            Flowbite™
+            Market Mingle
           </a>
           . All Rights Reserved.
         </span>

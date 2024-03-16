@@ -1,3 +1,4 @@
+import Image from "next/image";
 const Herosection = () => {
   return (
     <section className="bg-gray-950">
@@ -36,7 +37,7 @@ const Herosection = () => {
           </a>
         </div>
         <div className="hidden lg:col-span-5 lg:mt-0 lg:flex">
-          <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"/>
+          <Image src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"/>
         </div>
       </div>
     </section>
